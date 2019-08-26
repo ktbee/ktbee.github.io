@@ -1,2 +1,3 @@
 theme: 'ed.'
 remote_theme: 'minicomp/ed'
+permalink: /:year/:month/:title:output_ext
