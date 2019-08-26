@@ -1,4 +1,4 @@
-source 'https://rubygems.org' do
-  gem 'ed.'
-  gem 'github-pages', group: :jekyll_plugins
-end
+source "https://rubygems.org"
+gemspec
+
+gem "html-proofer"
