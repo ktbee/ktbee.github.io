@@ -1,0 +1,54 @@
+---
+layout: post
+title: Projects
+date: '2016-10-13 21:57:42'
+---
+
+I've always got something in the works! Below are some descriptions of what I'm working on currently. 
+
+<div style="display: flex; flex-flow: column wrap; justify-content: space-between; align-items: center">
+
+<div class="project">
+<h3><a href="https://bugzilla.mozilla.org/user_profile?user_id=567154">Firefox Contributor</a></h3>
+<div class="img-right" style="max-width: 200px;">  
+    
+![](/content/images/2016/10/firefox-logo.png)
+</div>
+Last summer I did an internship with Mozilla fixing papercut UI issues in Firefox. I worked on these sort of front end bugs before my internship started and have continued making contributions after my internship ended as well.
+<div class="icons">
+<a href="https://bugzilla.mozilla.org/user_profile?user_id=567154" title="Bugzilla Profile"><i class="fa fa-external-link-square" style="font-size: 2.5em"></i></a>
+</div><!-- end icons -->
+</div>
+
+<div class="project">
+<h3>Stockr</h3>
+A Node app for finding correlations between the stock market and other trending data sources. With Stockr, a user can pick a stock and a time frame to see its performance alongside information from other APIs, like words spoken in Congress or images from Flickr published in that time period. I have a prototype working locally, but there are a couple issues I want to clear up before I take it live.
+<br>
+<a href="https://github.com/ktbee/stockr" title="GitHub repo"><i class="fa fa-github-square" style="font-size: 2.5em; margin-top: .5em;"></i></a>
+</div>
+
+
+<div class="project">
+<h3><a href="http://lolcat.katiebroida.com/">LoLcat Ipsum</a></h3>
+<div class="img-right" style="bottom: 0;">
+    
+![](/content/images/2016/10/grumpy-latin-cat.png)
+</div>
+A lorum ipsum generator that is designed to mimic "lolspeak." I scraped sites’ HTML and parsed results to get latin and lolspeak text file, then wrote a program to display generated text according to user’s specifications. 
+
+<div class="icons">
+<a href="https://github.com/ktbee/lolcat-ipsum" title="GitHub repo"><i class="fa fa-github-square" style="font-size: 2.5em"></i></a>
+<a href="http://lolcat.katiebroida.com" title="See it live"><i class="fa fa-external-link-square" style="font-size: 2.5em"></i></a>
+</div><!-- end icons -->
+</div>
+
+<div class="project">
+<h3>Itch</h3>
+<div class="img-right" style="max-width: 200px;">
+    
+![](/content/images/2016/10/scratch-logo.png)
+</div>
+I'm working with a friend on a JavaScript/HTML/CSS library for students transitioning from coding with MIT’s Scratch tool to creating web apps. It's not public, but I hope to have a minimally working library we can publish soon.
+</div>
+
+</div>
