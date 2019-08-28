@@ -104,6 +104,10 @@ a, .text-title a {
   text-decoration: none;
 }
 
+.text-title a {
+  font-size: 1.2rem;
+}
+
 /* `:focus` is linked to `:hover` for basic accessibility*/
 a:hover,
 a:focus {
@@ -349,6 +353,7 @@ h3.masthead-title {
 /* Sidebar content*/
 .sidebar {
   background-color: $link-color;
+  color: #fff;
 }
 
 .sidebar a {
@@ -603,7 +608,8 @@ a.sidebar-nav-item:focus {
 .theme-base-cyan .container a,
 .theme-base-cyan .sidebar-toggle,
 .theme-base-cyan .related-posts li a:hover {
-  color: #75b5aa;
+  /*color: #75b5aa;*/
+  color: #427b56;
 }
 
 /* Blue*/
