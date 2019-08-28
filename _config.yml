@@ -46,11 +46,12 @@ exclude:
 
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 
 # Theme
 theme: "ed."
 
-permalink: /:year/:month/:title:output_ext
+permalink: /:title:output_ext
 
 feed:
   categories:
