@@ -4,7 +4,7 @@
 title:               Katie Broida
 tagline:             'Ruminations on Coding and Crafting'
 description:         'A blog for keeping notes on learning codes and crafts. '
-url:                 'katiebroida.com'
+url:                 'blog.katiebroida.com'
 baseurl:             ''
 
 # About/contact
@@ -44,7 +44,17 @@ exclude:
   - optional
   - vendor
 
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+
 # Theme
 theme: "ed."
 
-permalink: /:year/:month/:title:output_ext
+permalink: /:title:output_ext
+
+feed:
+  categories:
+    - code
+    - crafts
+

@@ -1,4 +1,6 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 gemspec
 
-gem "html-proofer"
+gem 'html-proofer'
+gem 'jekyll-feed'
+gem 'jekyll-redirect-from'
