@@ -11,21 +11,21 @@ I've been working on a fun JavaScript art project lately that I've been calling 
 Ideally you watch Youtopia from a tube TV, which is surprisingly easy to do if you have a digital to analog converter. If not, It's still pretty good on your computer. However when I watched it on a tube TV, it was amazing how much I was transported back to a time before the internet. Sometimes I would find myself wanting to pause a video, then think I couldn't because it was a TV show, then realize I could because it was just the TV on the internet!
 
 
-![](/content/images/2017/12/buns-of-steel-1.gif)
+![](/assets/images/2017/12/buns-of-steel-1.gif)
 <i>Results for the search term "Buns of Steel"</i>
- 
+
 <h3>An art project</h3>
 
 The premise of Youtopia is simple, but it lends to some intriguing juxtapositions and more complex meaning from the video combinations that turn up. When you arrive at [http://youtopia.world/](http://youtopia.world/), you see four YouTube videos that are related by a common search term. I made it it so that the app searches for one random word, and returns the first four results. You can see the search term in the developer's console.
 
     
-![](/content/images/2018/01/could.gif)
+![](/assets/images/2018/01/could.gif)
 <i>For the term "could" we get two music videos, an ad, and a live stream about exorcising demons from the White House</i>
 
 One thing I love about this project is the surprising layers of meaning that are created from seemingly innocuous search words or phrases. I've made it possible to search for terms if you add them to the end of the youtopia.world URL, for example "[https://youtopia.world/your search term here](http://youtopia.world/your%20search%20term%20here)". 
 
 
-![](/content/images/2018/01/Screen-Shot-2018-01-28-at-9.42.47-PM.png)
+![](/assets/images/2018/01/Screen-Shot-2018-01-28-at-9.42.47-PM.png)
 <i>Sorting algorithms and Arabic chants for the term "sort"</i>
 
 

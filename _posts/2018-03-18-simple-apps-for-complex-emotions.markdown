@@ -8,9 +8,8 @@ tags:
 
 Recently I made a couple apps with [my friend Emily Theis](http://emilythe.is/) based on podcasts by [WNYC's Death, Sex and Money](https://www.wnycstudios.org/shows/deathsexmoney). This first one is [breakupsurvival.guide](http://breakupsurvival.guide/), which is [based on listener submitted breakup survival suggestions.](https://www.wnycstudios.org/story/cut-loose-breakups-death-sex-money/) Initially all of these suggestions were put together by Death, Sex and Money in a Google Sheet, but Emily noticed there was always other people looking at [this Google Sheet](https://docs.google.com/spreadsheets/d/1M42gLZLANOxXxl9-N2MEYcw0FW9ng2fSRhaLtrMykw0/edit#gid=1875877531) along with her. 
 
-<div class="img-center">
-    
-![Screen-Shot-2018-03-18-at-3.43.06-PM](/content/images/2018/03/Screen-Shot-2018-03-18-at-3.43.06-PM.png)
+<div class="img-center" markdown="1">
+![Google Sheet screenshot]({{site.url}}/assets/images/2018/03/Screen-Shot-2018-03-18-at-3.43.06-PM.png)
 <i>Are you feeling the same things I am, Anonymous Camel? </i>
 </div>
 
@@ -59,9 +58,8 @@ The one thing that was tricky was that at one point we accidentally had a second
 
 [The code for this app](https://github.com/emilytheis/breakup-survival/blob/master/js/app.js) could be improved in a few ways (namely by caching the Sheet data,  caching the HTML element reference so you don't have to get the elements by ID on each click, and adding a loading animation), but for a quick and fun project it worked well enough. We made an app-y website that a ton of people visited, that got [some German press](https://www.jetzt.de/liebe-und-beziehung/emily-theis-hat-den-breakup-survival-guide-programmiert) and that Death, Sex and Money were excited about! Plus another bonus: turning on Google translate for that German article introduced me to such gems as "grief hole."
 
-<div class="img-center">
-    
-![bsg-demo](/content/images/2018/03/bsg-demo.gif)
+<div class="img-center" markdown="1">
+![bsg-demo](/assets/images/2018/03/bsg-demo.gif)
 </div>
 
 
@@ -74,9 +72,8 @@ The one thing that was tricky was that at one point we accidentally had a second
 
 In fact, DSM ended up liking the project enough to ask us to do another one for their [Opportunity Costs series](https://www.wnycstudios.org/story/opportunity-costs-death-sex-money-podcast) about the role class identity plays in our lives. In a similar vein as the Breakup Survival Guide, it shows randomized listeners' responses to the question, what makes you proud or ashamed of your class? You can find this app at [http://dsmclass.community/](http://dsmclass.community/)
 
-<div class="img-center">
-    
-![class-demo-1](/content/images/2018/03/class-demo-1.gif)
+<div class="img-center" markdown="1">
+![class-demo-1](/assets/images/2018/03/class-demo-1.gif)
 </div>
 
 [For this second round](https://github.com/emilytheis/dsm-class/blob/master/js/app.js), I used `localStorage` in the browser to made caching improvements for both the Sheet data and also for the HTML elements:
@@ -103,9 +100,8 @@ And I also created [a service worker to make this website a little more of a Pro
 
 I'm pleased to say that we got a lot of positive feedback and visitors to this Class app as well. People tend to come and stay on these apps, even for up to a minute at a time, which seems like an eternity on the internet. It makes me really excited that a simple premise and website can be so powerful for users. It feels a bit like an art project in the style of [Post Secret](https://postsecret.com/), which is also vehicle for people to anonymously share their innermost thoughts on taboo subjects.
 
-<div class="img-center">
-    
-![dsm-class-1](/content/images/2018/03/dsm-class-1.png)
+<div class="img-center" markdown="1">
+![dsm-class-1](/assets/images/2018/03/dsm-class-1.png)
 </div>
 
 Aside from the community response, I found these projects had a few other upsides as well. The tech stack is very simple thanks to the Tabletop library for Google Sheets, which made it easy to get started quickly and simply. I could see this being very helpful for anyone that wanted to get up a quick app prototype. Its simplicity also seemed like a bonus for Emily in terms of learning about the backend and for launching the site.  I highly recommend using Tabletop and Google Sheets if you're a beginner looking to create an app without needing to deal with a complicated tool set. 
