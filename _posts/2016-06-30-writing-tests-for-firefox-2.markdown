@@ -9,11 +9,9 @@ tags:
 
 Writing unit tests is one part of the software engineering world that I didn't have much experience in before my internship with Mozilla. I knew it was important in theory, but when working on solo projects there always seemed to be another more pressing aspect to work on. Also when I broke my code, I could see it was broken and fix it. Writing a test would just tell me what I already knew, right?
 
-<div class="img-center">
+![Students taking a test](/assets/images/2016/06/Shimer_comping_66_Recondite.jpg)
+*After you graduate, you still have tests. In fact, now you write them.*
 
-![Students taking a test](/content/images/2016/06/Shimer_comping_66_Recondite.jpg)
-<i>After you graduate, you still have tests. In fact, now you write them.</i>
-</div>
 
 ### Why testing is important
 A big reason for writing tests is to make your code maintainable in the long term. For my personal projects this benefit is a little less obvious because I don't typically collaborate with others or have projects that have spanned years and years (yet), but for Firefox this maintainability is crucial. It's a large codebase with a lot of contributors. I found having tests made my contributions a lot easier because I could tell immediately if my carefully crafted code was breaking another part of the software. 
@@ -43,12 +41,10 @@ When first starting out, I wasn't sure what pieces of code were significant enou
 These have been good guidelines for knowing when a code reviewer will want me to add a test to a patch I'm writing. 
 
 ### Asynchronous testing
-<div style="float: right; margin-left: 1em">
 
-![Time is hard](/content/images/2016/06/The_Persistence_of_Memory.jpg)
-<br>
-<i>Time is hard</i>
-</div>
+![Time is hard](/assets/images/2016/06/The_Persistence_of_Memory.jpg)
+*Time is hard*
+
 When I started writing tests for Firefox, one stumbling block I ran into was allowing enough time for a process to finish running (like a function triggered by a mouse click) before the test moved onto the next step of checking its results. To make sure everything in your test finishes processing before you check it, you can write your test to be asynchronous. 
 
 Going back to the click event example, you can write an asynchronous test for the function that is triggered by a click by using [generator functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*). Generators are JavaScript functions that allow you to pause them until you get a value from an expression.  After the click, you can make the generator function (and the entire test) wait until the action that was triggered finishes by using `yield` on your expression. The code snippet below is in a test I'm working on for a button that can indicate your browser's zoom level and also reset to the default zoom level when clicked. It is executed as part of a generator function.  
