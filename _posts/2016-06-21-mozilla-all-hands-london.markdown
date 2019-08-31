@@ -9,16 +9,11 @@ tags:
 
 ### My experience at Mozilla's All Hands meeting in London
 
-<div class="img-center">
-    
-![Tardis](/content/images/2016/06/tardis__x-large.jpg)
-</div>
+![Tardis](/assets/images/2016/06/tardis__x-large.jpg)
+
 Last week I attended Mozilla's All Hands meeting and visited London. They have [these meetings](https://wiki.mozilla.org/All_Hands) twice a year to give everyone in the organization a chance to meet each other face to face, with some people traveling from as far away as New Zealand and Taiwan. Mozilla is such a large, distributed organization, that I think everyone looks forward to hashing things out more quickly during these meetings and further developing relationships among humans. I was also really into the Doctor Who theme they had going on. I think the Mozilla event planners knew their audience when they were deciding how to celebrate the London location. 
 
-<div class="img-center">
-
 ![Dr Who hashtags](https://media.giphy.com/media/FLUkjdQ1u6COY/giphy.gif)
-</div>
 
 I was impressed and really appreciative that Mozilla flies out everyone in the organization, including interns. Otherwise I'm not sure I would have had a chance to meet my mentor in person, and I've found that something essential seems to be missing from purely IRC or email interactions. We were able to wrap up a bug fix that I had been struggling with for a long time in just 20 minutes or so (the issue ended up being some kind of cache on my computer. It always seems to be a cache somehow :/ ). 
 
@@ -38,12 +33,8 @@ Usually when people think of open source software, they think of GitHub. While G
 #### Cost of components
 Software is easy to get started hacking on because the cost to start is essentially zero (assuming you already have a computer and an internet connection). With hardware, you need to invest some money up front to buy parts and/or access to tools. This is a tough problem, though [some components seem to be getting cheaper all the time](https://www.engadget.com/2016/05/16/raspberry-pi-zero-camera-module/). Hopefully the increasing popularity of makerspaces will help close the gap with tool access as well. 
 
-<div class="img-center">
-
 ![Dr Who saying "well"](https://media.giphy.com/media/12WPr8omNjZdle/giphy.gif)
-<br>
-<i>There's always something to figure out</i>
-</div>
+*There's always something to figure out*
 
 ### IoT
 Another area I explored was connected devices. I had a chance to sit in on some of Mozilla's IoT discussions and demos. It seems like they're still in the early stages of developing and exploring IoT projects, but one I got excited about is FlyWeb. FlyWeb uses existing web technologies to allow phones to discover web apps that are physically nearby and interact with them. I have a grocery list/tracking app I've had in mind for a while that could work well with FlyWeb. I think I'll give it a shot as one of my upcoming projects. To read more about FlyWeb, check out the article below (also has good info on other Mozilla connected devices endeavors) and the Mozilla wiki page:
@@ -54,8 +45,5 @@ Another area I explored was connected devices. I had a chance to sit in on some 
 
 Overall, my week in London was an awesome experience that has me inspired in a lot of different ways. Not only have I got more project ideas bouncing around in my head, but I also have a deeper appreciation for how powerful open source communities can be. Reading the news, the world can seem pretty bleak sometimes (this was driven home by [some of the local events when we were in London](http://www.bbc.com/news/uk-politics-36590824)). Seeing the altruism and work going on even just at one open source organization during this week felt like a bright spot. 
 
-<div class="img-center">
-
-![Mozilla group photo](/content/images/2016/06/moz-a-0191.jpg)
-<i>All the peeps in London!</i>
-</div>
+![Mozilla group photo](/assets/images/2016/06/moz-a-0191.jpg)
+*All the peeps in London!*

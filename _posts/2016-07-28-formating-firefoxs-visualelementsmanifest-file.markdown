@@ -8,14 +8,14 @@ tags:
 - windows10
 ---
 
-###<i>Part 2 in [a series](http://blog.katiebroida.com/tag/windows10/) on improving Firefox's Windows 10 start menu tile</i>
+### <i markdown="1">Part 2 in [a series](http://blog.katiebroida.com/tag/windows10/) on improving Firefox's Windows 10 start menu tile</i>
 
-![Windows 10 logo](/content/images/2016/07/win10.jpeg)
+![Windows 10 logo](/assets/images/2016/07/win10.jpeg)
 *Into the start menu rabbit hole ...*
 
 Once I understood how to get all of my files in the right place ([see part 1](http://blog.katiebroida.com/copying-files-to-firefoxs-root-install-folder/)), I next had to figure out what should go in those files. As I mentioned in my first post, the `VisualElementsManifest.xml` file tells Windows which custom image and style settings to use for the start menu tile. The documentation made it seem straightforward:
 
-https://msdn.microsoft.com/en-us/library/windows/apps/dn393983.aspx
+[https://msdn.microsoft.com/en-us/library/windows/apps/dn393983.aspx](https://msdn.microsoft.com/en-us/library/windows/apps/dn393983.aspx)
 
 Though I followed the doc's formatting, I didn't always find that my VisualElementsManifest file would affect my start menu tile in a way I expected or even sometimes at all. I found I really had to get into a rhythm of making a change and then triggering a force update of the start menu tile to see the affects. Sometimes I found I was forgetting the force-tile-refresh step, and would draw the wrong conclusion from my changes based on the outdated tile. 
 
@@ -34,18 +34,16 @@ C:\Users\<User>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
 
 For more info on where start menu files live, you can check out my source on this:
 
-http://superuser.com/questions/960406/where-are-all-locations-of-start-menu-folders-in-windows-10
+[http://superuser.com/questions/960406/where-are-all-locations-of-start-menu-folders-in-windows-10](http://superuser.com/questions/960406/where-are-all-locations-of-start-menu-folders-in-windows-10)
 
-<div style="float:right; margin-left: 1em; text-align: center;">
-
-![Mr Rabbit](/content/images/2016/07/Down_the_Rabbit_Hole.png)
+![Mr Rabbit](/assets/images/2016/07/Down_the_Rabbit_Hole.png)
 *Time to dig a little deeper*
-</div>
+
 Even after establishing a consistent workflow of making a change and refreshing the icon, I still didn't get tile changes that were consistent with Microsoft's documentation. For newer computers, the customized icon worked perfectly. For older Windows 10 computers, there was no change in the tile's appearance at all. 
 
 To figure this out, I looked for some examples of where this was actually working ([à la a recent post on troubleshooting I did](http://blog.katiebroida.com/anatomy-of-a-bug/#doesanyofitworkcorrectly)), and found that Google's Chrome had a nice looking custom icon and I could access their VisualElementsManifest file in Chrome's folder in `Program Files`. I noticed that they had two VisualElementsManifest files, one called `chrome.VisualElementsManifest.xml` and one just called `VisualElementsManifest.xml`. I've listed their contents below:
 
-###VisualElementsManifest.xml
+### VisualElementsManifest.xml
 
 ```
 <Application>
@@ -61,7 +59,7 @@ To figure this out, I looked for some examples of where this was actually workin
 </Application>
 ```
 
-###chrome.VisualElementsManifest.xml
+### chrome.VisualElementsManifest.xml
 
 ```
 <Application xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
@@ -79,7 +77,7 @@ Aside from the name, these two files differ in their formatting. The "chrome" on
 My theory for why Chrome had overlapping settings files sounds pretty good, right? And mimicking their set up didn't break my start menu tile when I created an installer and installed my version with these changes. [However when it went into production for Nightly (Firefox's release channel for testing new changes), it ended up causing a regression](https://bugzilla.mozilla.org/show_bug.cgi?id=1286511). For some Windows 10 computers the correct custom icon rendered in the start menu. For others, tile only rendered with a light blue background, a small icon image and no text for the name of the app to let users know what it was. 
 
 
-![Broken tile](/content/images/2016/07/broken-win10-tile.jpeg)
+![Broken tile](/assets/images/2016/07/broken-win10-tile.jpeg)
 *Our broken friend is in the top right corner*
 
 
@@ -87,7 +85,7 @@ The solution I found here was to just delete the `VisualElementsManifest.xml` fi
 
 Long story short, this is what we ended up using for Firefox's VisualElementsManifest file:
 
-###firefox.VisualElementsManifest.xml
+### firefox.VisualElementsManifest.xml
 
 ```
 <Application xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
