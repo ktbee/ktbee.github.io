@@ -8,29 +8,21 @@ tags:
 - windows10
 ---
 
-###<i>Part 1 in [a series](http://blog.katiebroida.com/tag/windows10/) on improving Firefox's Windows 10 start menu tile</i>
-<br>
+### <i markdown="1">Part 1 in [a series](http://blog.katiebroida.com/tag/windows10/) on improving Firefox's Windows 10 start menu tile</i>
+
 I've been working on a pretty challenging bug, and I thought I'd share it with you all. The issue was how to improve Firefox's start menu tile for Windows 10. Currently on Windows 10, the start menu tile for Firefox uses just the default display settings. This means the tile image is small and the background color is an uninspiring grey for me. For others it is the default start menu color.
 
-<div class="img-center">
-    
-![Old Firefox icon](/content/images/2016/07/old-firefox-icon.png)
-<br>
+![Old Firefox icon](/assets/images/2016/07/old-firefox-icon.png)
 <i>Not an engaging icon and looks hard to click</i>
-</div>
 
 Ideally the Firefox image should be larger and have a custom background color that matches Firefox's branding. 
 
-<div class="img-center">
-    
-![Purdy](/content/images/2016/07/tile-colors-1.png)
-<br>
+![Purdy](/assets/images/2016/07/tile-colors-1.png)
 <i>So pretty, so clickable</i>
-</div>
 
 To customize a Windows 10 start menu tile, you need to create an XML file named ExecutableName.VisualElementsManifest.xml that tells Windows what image and colors to use for your tile. With this file in the same directory as your executable file, Windows 10 will display your custom settings. It sounds straight forward enough, but there were a couple of roadblocks. 
 
-## The challenge: 
+## The challenge:
 ### Editing the build file to copy my VisualElementsManifest file into the right directory
 
 In order to get my XML file into the right directory, I needed to tell the program that builds Firefox that I wanted my VisualElementsManifest file to be copied into object directory that it generates and that I want it to be in its `dist/bin` folder. To unpack that last sentence a little bit, when I run `mach build` ([more info here](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)), Firefox's build program (mach) looks at Firefox's configuration and definition files to see what the developers wanted included in the Firefox program. Then it builds the program in the object directory according to these instructions. I needed to give instructions to mach to add my new file to the same folder as the firefox.exe file. 

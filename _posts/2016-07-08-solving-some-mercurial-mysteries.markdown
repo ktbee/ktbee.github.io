@@ -10,10 +10,7 @@ tags:
 
 [**edit 7/12/16:** This post goes through some pretty specific issues I had, but if you're looking for more general information on how Mercurial works and what your workflow should be like, you can check out a fellow Outreachy intern Anjana Vakil's post: [http://vakila.github.io/blog/warming-up-to-mercurial/](http://vakila.github.io/blog/warming-up-to-mercurial/). I found it very helpful!]
 
-<div style="float: right; width: 300px;">
-
-![Mercurial logo](/content/images/2016/07/mercurial-logo.png)
-</div>
+![Mercurial logo](/assets/images/2016/07/mercurial-logo.png)
 
 Mozilla uses a version control system called Mercurial, which was new to me as a Git user. While overall I like Mercurial, I've had some growing pains in terms of both getting used to a new system and getting used to collaborating with other developers in general. I solved a couple issues this week, so I thought I'd share. 
 
@@ -33,16 +30,9 @@ Generally speaking it makes sense to do something like `hg merge` to bring my pa
 
 >Reviewing merge commits is wonky because the diff of a merge commit is ambiguous and can be deceiving. Furthermore, many projects using MozReview attempt to keep repository history as linear as possible (read: no merge commits) because linear history is easier to reason about and makes operations like bisect simpler.
 
-<span style="text-align:right; font-size: 1.25em; font-style: italic; display:block;">
-
 --[The Docs](http://mozilla-version-control-tools.readthedocs.io/en/latest/mozreview/commits.html#no-merge-commits)
 
-</span>
-
-<div class="img-center">
-
-![No merge commits](/content/images/2016/07/no-merge-commits-1.jpg)
-</div>
+![No merge commits](/assets/images/2016/07/no-merge-commits-1.jpg)
 
 After checking in with my mentor and another Firefox dev, I learned the solution is to use `hg rebase` instead. The command below is the one they suggested I use:
 
@@ -89,7 +79,7 @@ In the past I had received some feedback about removing trailing white spaces, s
 
 I mentioned this issue to a A friend of mine, and told me about a SublimeText package that highlights trailing white spaces instead of deleting them. 
 
-![trailing spaces package](/content/images/2016/07/trailing-spaces.png)
+![trailing spaces package](/assets/images/2016/07/trailing-spaces.png)
 
 Simply enough, it's called ["TrailingSpaces"](https://github.com/SublimeText/TrailingSpaces) and seems like it will be a good solution to noticing trailing white spaces, but not deleting them if I don't want to. 
 

@@ -22,12 +22,13 @@ While the idea is simple enough, I found that building my local copy of Firefox 
 - When you first build your Mozilla source code, it will likely take a very long time. However for my first Windows build, I found it took over 24 hours. Even though I was using an old laptop, this seemed extreme. My mentor mentioned that my power settings were likely the issue, and indeed they were. Make sure your computer is charging and its power settings prevent it from going to sleep when plugged in (even if temporarily). My computer had been going to sleep and not building except for every so often when I would check it.  
 
 ### Tool time!
-![tool time!](/content/images/2016/06/tim-allen.gif)
-<br>
+
+![tool time!](/assets/images/2016/06/tim-allen.gif)
 
 While troubleshooting, these have been my most useful resources so far:
 
 #### [Browser toolbox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox)
+
 If you're familiar with web development, you've likely used "inspect element" dev tools to take a look at the code on a page and seen a bunch of useful information like CSS rules and console errors. Well, I hope you're sitting down while you're reading this, because it turns out Mozilla has the same thing ... for the browser itself. It's called the [Browser toolbox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox), and it allows your to inspect elements of the browser like you traditionally would a web page. Perhaps my readers won't be as fazed or excited about this capability, but I found inspecting the browser itself to be a little bit like pulling back a curtain and finding the emperor of Oz was a kindly little dude. Firefox is a piece of software that I have been using since well before I understood any code, so realizing it was something I could take apart and understand was empowering. Even if you don't plan to contribute to Firefox, I recommend taking a peek.
 
 

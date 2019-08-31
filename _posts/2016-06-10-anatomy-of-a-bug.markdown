@@ -7,10 +7,7 @@ tags:
 - mozilla
 ---
 
-<div style="float:left; width: 300; margin: 0 30px 30px 0;">
-
-![Anatomy of a bug](/content/images/2016/06/anatomy-of-a-bug-web.jpg)
-</div>
+![Anatomy of a bug](/assets/images/2016/06/anatomy-of-a-bug-web.jpg)
 
 I'm currently doing [an internship with Mozilla fixing UI bugs](http://blog.katiebroida.com/getting-started-contributing-to-firefox/) and towards the beginning of my work, my mentor wrote up a [helpful blog post on how he went about tracking down a bug](https://msujaws.wordpress.com/). Reading his post got me thinking about my own troubleshooting process. When I'm working on a bug, it sometimes feels like I'm just checking and trying things until they work. However after thinking about what these UI issues had in common, I realized there are a few questions I try to answer each time:
 
@@ -22,10 +19,7 @@ Though I'm not working with customers now (and I'm definitely not debugging live
 ### How is it broken? 
 This question is probably an obvious one to ask, but it can take a surprising amount of digging to answer fully. I'll use [a recent bug I fixed as an example](https://bugzilla.mozilla.org/show_bug.cgi?id=1260595). In this issue, themes in Firefox's [Customize Mode](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars) would be listed in their menu multiple times if the menu wasn't closed correctly. Here's a screenshot from the bug report:
 
-<div class="img-center">
-
-![Duplicated themes listing](/content/images/2016/06/All-items-in-Themes-panel-are-duplicated.png)
-</div>
+![Duplicated themes listing](/assets/images/2016/06/All-items-in-Themes-panel-are-duplicated.png)
 
 This theme issue was sort of funny because you had to go through some very specific steps to repro it. To duplicate the themes, you needed to open the menu and then close the tab with the menu open. When you go back to Customize Mode, you would find the themes had been duplicated when you re-opened the themes menu. However if you closed them menu before closing the tab, the themes wouldn't be duplicated. This made me think that some event wasn't firing as it was intended, either it wasn't firing at all or was firing too many times. From looking at the code on the "Themes" menu button, I understood how it was supposed to work. The menu items were supposed to be cleared when the menu closed, and then re-populated when it was opened. This made me think the menu clearing "onpopuphidden" event wasn't firing if the menu wasn't explicitly closed (leaving it open and closing the tab apparently didn't count as the popup menu closing for the event). 
 
@@ -36,10 +30,7 @@ To make sure the menu was cleared even without the onpopuphidden event, I added 
 
 I thought it was interesting that even though I had managed to fix the problem, I still didn't understand the underlying behavior 100%. Lesson learned, you can always go deeper into the rabbit hole.
 
-<div class="img-center">
-
-![swarmmmmm](/content/images/2016/06/Animal-Insect-Bees-Medieval-Swarm.jpg)
-</div>
+![swarmmmmm](/assets/images/2016/06/Animal-Insect-Bees-Medieval-Swarm.jpg)
 
 ### Does any of it work correctly?
 I find myself asking this question both when I'm trying to understand how a feature works and what possible solutions there are for fixing the bug. For example in the themes menu bug, knowing that the menu clearing function worked correctly in some circumstances helped me realize the reason why it didn't work in others. 
@@ -48,4 +39,4 @@ I find myself asking this question both when I'm trying to understand how a feat
 
 That's it, that's the secret sauce. I hope breaking down this process is helpful. If you have your own tricks of the trade, let me know in the comments!
 
-![Caterpillar image](/content/images/2016/06/caterpillar-vintage-illustration.jpg)
+![Caterpillar image](/assets/images/2016/06/caterpillar-vintage-illustration.jpg)
