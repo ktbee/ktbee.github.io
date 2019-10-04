@@ -46,6 +46,5 @@ Not only did I make a wedding dress, I got married in it too! I am not sure I re
 
 
 ### I made a job change
-- I work at Bocoup now!
-- Work in opensource on test262 report and Scratch
-- Been really cool learning more about how games and animations work
+
+I've been working at [Bocoup](https://bocoup.com), a web platform consulting group, for a little over a year now. I've been working on some really cool projects like [Scratch](https://scratch.mit.edu/) and [test262.report](https://bocoup.com/blog/announcing-test262-report). For our Scratch work in particular, it has been fascinating to to learn about its internals and how video games/animations work in general. I've got some planned blog post ideas that came out of that work, but if you want to read about it in the meantime, you can check out the ["Interoperability and Feature Parity section"](https://bocoup.com/blog/porting-scratch-from-flash-to-javascript-performance-interoperability-and-extensions) in one of our Scratch work write ups.
