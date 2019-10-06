@@ -414,10 +414,11 @@ a.sidebar-nav-item:focus {
   top:  .8rem;
   left: 1rem;
   display: block;
-  padding: .25rem .75rem;
+  padding: .5rem .75rem;
   color: #505050;
   background-color: #fff;
   border-radius: .25rem;
+  border: none;
   cursor: pointer;
 }
 
@@ -433,6 +434,7 @@ a.sidebar-nav-item:focus {
 }
 
 .sidebar-toggle:active,
+.sidebar-toggle:hover,
 #sidebar-checkbox:focus ~ .sidebar-toggle,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   color: #fff;
@@ -440,6 +442,7 @@ a.sidebar-nav-item:focus {
 }
 
 .sidebar-toggle:active:before,
+.sidebar-toggle:hover:before,
 #sidebar-checkbox:focus ~ .sidebar-toggle:before,
 #sidebar-checkbox:checked ~ .sidebar-toggle:before {
   background-image: -webkit-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
