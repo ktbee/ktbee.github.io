@@ -2,15 +2,15 @@
 
 # Setup
 title:               Katie Broida
-tagline:             'Ruminations on Coding and Crafting'
-description:         'A blog for keeping notes on learning codes and crafts. '
+tagline:             'Ruminations on Coding'
+description:         'A blog for keeping notes on learning codes'
 url:                 ''
 baseurl:             ''
 
 # About/contact
 author:
   name:              Katie Broida
-  url:               https://twitter.com/kbroida
+  url:               
 
 # Color scheme. Options: red, orange, magenta, cyan, blue, brown
 color-scheme: cyan
