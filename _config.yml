@@ -49,7 +49,7 @@ plugins:
   - jekyll-redirect-from
 
 # Theme
-theme: "ed."
+# theme: "ed."
 
 permalink: /:title:output_ext
 
